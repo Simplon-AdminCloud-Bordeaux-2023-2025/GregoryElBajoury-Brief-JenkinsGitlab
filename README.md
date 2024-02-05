@@ -45,4 +45,4 @@ Principale étape pour réaliser une routine de mise à jour
 ## **Critères de performance**
 
 les scripts sont fonctionnels.
-Le dossier est cohérant.
+Le dossier est cohérent.
