@@ -15,11 +15,11 @@
 - <a href="vars.json" target="_blank">vars.json</a>
  : Ce fichier contient les variables d'environnement nécessaires pour l'authentification AWS. Il est utilisé par Packer lors de la création de l'image AMI Jenkins.
 
-- [jenkins.json](jenkins.jsons) : Ce fichier est utilisé par Packer pour créer l'image AMI Jenkins sur AWS. Il définit les variables telles que la région, le type d'instance, et les scripts de provisionnement à exécuter.
+- <a href="jenkins.json" target="_blank">jenkins.json</a> : Ce fichier est utilisé par Packer pour créer l'image AMI Jenkins sur AWS. Il définit les variables telles que la région, le type d'instance, et les scripts de provisionnement à exécuter.
 
-- [script.sh](script.sh) : Ce script Shell est utilisé par Packer pour provisionner l'image AMI Jenkins. Il met à jour le système, installe Java, télécharge la clé de signature de Jenkins et ajoute le référentiel Jenkins avant d'installer Jenkins et d'activer le service.
+- <a href="script.sh" target="_blank">script.sh</a> : Ce script Shell est utilisé par Packer pour provisionner l'image AMI Jenkins. Il met à jour le système, installe Java, télécharge la clé de signature de Jenkins et ajoute le référentiel Jenkins avant d'installer Jenkins et d'activer le service.
 
-- [main.tf](main.tf) : Ce fichier est utilisé par Terraform pour déployer l'infrastructure AWS nécessaire pour l'instance Jenkins. Il crée un groupe de sécurité avec les règles d'accès appropriées et déploie l'instance EC2 Jenkins en utilisant l'AMI créée par Packer.
+- <a href="main.tf" target="_blank">main.tf</a> : Ce fichier est utilisé par Terraform pour déployer l'infrastructure AWS nécessaire pour l'instance Jenkins. Il crée un groupe de sécurité avec les règles d'accès appropriées et déploie l'instance EC2 Jenkins en utilisant l'AMI créée par Packer.
 
 ## Configuration
 
