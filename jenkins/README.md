@@ -13,7 +13,7 @@
 ### Fonction des Fichiers
   
 - <a href="vars.json" target="_blank">vars.json</a>
- : Ce fichier contient les variables d'environnement nécessaires pour l'authentification AWS. Il est utilisé par Packer lors de la création de l'image AMI Jenkins.
+ : Ce fichier contient les variables d'environnement nécessaires pour l'authentification AWS. Il est utilisé par Packer lors de la création de l'image AMI Jenkins. C'est içi que vous assignez votre access key et votre secret key.
 
 - <a href="jenkins.json" target="_blank">jenkins.json</a> : Ce fichier est utilisé par Packer pour créer l'image AMI Jenkins sur AWS. Il définit les variables telles que la région, le type d'instance, et les scripts de provisionnement à exécuter.
 
@@ -30,7 +30,7 @@ git clone https://github.com/Simplon-AdminCloud-Bordeaux-2023-2025/GregoryElBajo
 ```
 ### Assurez-vous d'avoir les variables d'environnement AWS_ACCESS_KEY_ID et AWS_SECRET_ACCESS_KEY configurées avec les clés d'accès appropriées.
 
-### Modifiez le fichier vars.json avec vos informations d'identification AWS :
+### Modifiez le fichier <a href="vars.json" target="_blank">vars.json</a> avec vos informations d'identification AWS :
 
 ```
 {
