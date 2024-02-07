@@ -21,12 +21,13 @@
 #  
 #
 #
-# Le 05 février 2024 
-
-# Ce script Terraform permet de créer une instance EC2 pour Jenkins dans AWS. Il commence par spécifier le fournisseur AWS et la région,
-# puis récupère l'AMI la plus récente pour Jenkins à partir de vos propres images. 
-# Ensuite, il définit un groupe de sécurité avec des règles d'entrée pour le trafic SSH et HTTP, ainsi qu'une règle de sortie autorisant tout le trafic.
-# Enfin, il crée une instance EC2 en utilisant l'AMI récupérée et associe le groupe de sécurité à cette instance.
+# Le 05 février 2024 - 
+/*
+Ce script Terraform permet de créer une instance EC2 pour Jenkins dans AWS. Il commence par spécifier le fournisseur AWS et la région,
+puis récupère l'AMI la plus récente pour Jenkins à partir de vos propres images. 
+Ensuite, il définit un groupe de sécurité avec des règles d'entrée pour le trafic SSH et HTTP, ainsi qu'une règle de sortie autorisant tout le trafic.
+Enfin, il crée une instance EC2 en utilisant l'AMI récupérée et associe le groupe de sécurité à cette instance.
+*/
 
 # Définition du fournisseur AWS et spécification de la région
 provider "aws" {
