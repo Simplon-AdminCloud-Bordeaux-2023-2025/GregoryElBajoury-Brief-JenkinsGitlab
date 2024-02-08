@@ -1,14 +1,14 @@
-# GregoryElBajoury-Deploiement-de-VM-Automatise
+# Déploiement-de-VM-Automatisé
 
 ## **Contexte du projet**
 
 Défi : Prodigy Software connaît une croissance rapide et déploie ses solutions logicielles dans de plus en plus d'environnements clients. Pour répondre à cette demande croissante, l'entreprise souhaite automatiser le déploiement de ses solutions sur des machines virtuelles dans le cloud.
 
-Rôle des Administrateurs Cloud :
+## Rôle des Administrateurs Cloud :
 
 Les administrateurs Cloud de Prodigy Software ont pour mission de concevoir et de gérer des templates de machines virtuelles optimisés pour le déploiement de leurs logiciels. Ils doivent également mettre en place un processus de déploiement automatisé de ces ressources.
 
-Responsabilités clés :
+## Responsabilités clés :
 
 Création de Templates de Machines Virtuelles : Les administrateurs Cloud doivent collaborer avec les équipes de développement pour créer des templates de machines virtuelles qui répondent aux besoins spécifiques de chaque produit de Prodigy Software. Ces templates doivent être optimisés en termes de performances et de sécurité.
 
@@ -25,7 +25,7 @@ Création d'une routine de mise à jour des templates.
 
 ## **Modalités d'évaluation**
 
-Les templates sont fonctionnelles et pouvant être facilement mise à jour.
+Les templates sont fonctionnelles et pouvant facilement être mises à jour.
 
 ## **Livrables**
 
