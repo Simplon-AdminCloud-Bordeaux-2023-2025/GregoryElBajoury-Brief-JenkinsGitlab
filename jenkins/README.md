@@ -2,7 +2,7 @@
 
 ### Ce dépôt contient les fichiers nécessaires pour déployer Jenkins sur AWS en utilisant Terraform pour la gestion de l'infrastructure et Packer pour la création de l'image AMI.
 
-## Prérequis
+## Prérequis ⚠️
 
 ### Assurez-vous d'avoir les éléments suivants avant de commencer :
 
@@ -21,18 +21,18 @@
 
 - <a href="main.tf" target="_blank">main.tf</a> : Ce fichier est utilisé par Terraform pour déployer l'infrastructure AWS nécessaire pour l'instance Jenkins. Il crée un groupe de sécurité avec les règles d'accès appropriées et déploie l'instance EC2 Jenkins en utilisant l'AMI créée par Packer.
 
-## Configuration
+## Configuration 👷‍♀️
 
 ### Clonez ce dépôt sur votre machine locale :
 
 ```
 git clone https://github.com/Simplon-AdminCloud-Bordeaux-2023-2025/GregoryElBajoury-Brief-JenkinsGitlab.git
 ```
-### Utiliser les variables d'environnement AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY configurées avec les clés d'accès appropriées.
+### Choix 1 - Utiliser les variables d'environnement AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY configurées avec les clés d'accès appropriées. 
 
 ### Pour exporter vos clés dans des variables d'environnement :
 
-### Ouvrir un terminal puis :
+### Ouvrir un terminal puis entrez ces commandes l'une après l'autre:
 
 `export AWS_ACCESS_KEY=votreCleDaccesAWS`
 
@@ -45,7 +45,9 @@ git clone https://github.com/Simplon-AdminCloud-Bordeaux-2023-2025/GregoryElBajo
 
 `echo $AWS_ACCESS_KEY`
 
-En retour vous devriez recevoir la valeur définie auparavant, à savoir votreCleDaccesAWS. Répetez le processus pour les deux autres variables d'environnement.
+En retour vous devriez recevoir la valeur définie auparavant, à savoir votreCleDaccesAWS. Répetez le processus pour les deux autres variables d'environnement restantes.
+
+### Choix 2 - Ne pas utiliser de variables d'environnement
 
 ### Modifiez le fichier <a href="vars.json" target="_blank">vars.json</a> avec vos informations d'identification AWS :
 
@@ -59,27 +61,45 @@ En retour vous devriez recevoir la valeur définie auparavant, à savoir votreCl
 
 ## Déploiement de l'infrastructure
 
-### Utilisez Packer pour créer l'image AMI Jenkins en exécutant la commande suivante :
+### dans votre IDE, vous rendre dans le répertoire `jenkins` du repo. Utilisez Packer pour créer l'image AMI Jenkins en exécutant la commande suivante :
 
 `packer build -var-file=vars.json jenkins.json
 `
 
-### Utilisez Terraform pour déployer l'instance Jenkins en exécutant les commandes suivantes :
+### Utilisez Terraform pour déployer l'instance Jenkins en exécutant les commandes suivantes, l'une après l'autre :
 
-```
-cd main
-terraform init
-terraform apply
-```
+`terraform init`
+
+`terraform plan`
+
+`terraform apply`
 ### Suivez les invites pour confirmer le déploiement.
 
 ## Accès à Jenkins
 
 ### Une fois le déploiement terminé, vous pouvez accéder à Jenkins via le navigateur en utilisant l'adresse IP publique de l'instance EC2 déployée et son port Jenkins (8080).
 
+Pour trouver l'adresse IP de la machine fraîchement créée :
+
+- Rendez-vous sur le portail AWS, identifiez vous puis accedez à la liste de vos instances ;
+- Identifiez la machine puis récupérez son ip publique ;
+- Entrez l'ip publique dans la barre de recherche de votre navigateur, puis ajoutez-y :8080
+
 ```
 xxx.xxx.xxx.xxx:8080
 ```
+
+Vous Arriverez sur une page vous indiquant la marche à suivre pour récupérer le mot de passe nécessaire pour accéder à Jenkins.
+Il s'agit ni plus ni moins que d'accéder au chemin `/var/lib/jenkins/secrets/initialAdminPaswword`.
+Pour ce faire rendez-vous, depuis un terminal de la vm créée, dans le dossier `/var/lib/jenkins/secrets/` puis affichez le fichier `initialAdminPaswword` avec la commande suivante :
+
+```
+cd /var/lib/jenkins/secrets/ && cat initialAdminPaswword
+```
+
+Copiez le contenu de ce fichier et collez le dans la fenêtre Jenkins de tout à l'heure.
+
+## Félicitations vous avez réussi à déployer Jenkins avec Packer et Terraform 🎆
 
 ## Maintenance et Gestion
 
