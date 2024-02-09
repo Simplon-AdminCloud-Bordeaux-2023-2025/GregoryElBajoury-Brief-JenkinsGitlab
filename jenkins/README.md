@@ -1,4 +1,4 @@
-# Déploiement Jenkins avec Terraform et Packer sur AWS
+# Déploiement de Jenkins avec Terraform et Packer sur AWS
 
 ### Ce dépôt contient les fichiers nécessaires pour déployer Jenkins sur AWS en utilisant Terraform pour la gestion de l'infrastructure et Packer pour la création de l'image AMI.
 
