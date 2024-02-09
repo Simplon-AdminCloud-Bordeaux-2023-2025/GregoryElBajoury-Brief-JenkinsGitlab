@@ -1,4 +1,4 @@
-# Déploiement Jenkins avec Terraform et Packer
+# Déploiement Jenkins avec Terraform et Packer sur AWS
 
 ### Ce dépôt contient les fichiers nécessaires pour déployer Jenkins sur AWS en utilisant Terraform pour la gestion de l'infrastructure et Packer pour la création de l'image AMI.
 
@@ -28,7 +28,24 @@
 ```
 git clone https://github.com/Simplon-AdminCloud-Bordeaux-2023-2025/GregoryElBajoury-Brief-JenkinsGitlab.git
 ```
-### Assurez-vous d'avoir les variables d'environnement AWS_ACCESS_KEY_ID et AWS_SECRET_ACCESS_KEY configurées avec les clés d'accès appropriées.
+### Utiliser les variables d'environnement AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY configurées avec les clés d'accès appropriées.
+
+### Pour exporter vos clés dans des variables d'environnement :
+
+### Ouvrir un terminal puis :
+
+`export AWS_ACCESS_KEY=votreCleDaccesAWS`
+
+`export AWS_SECRET_KEY=votreCleSecreteAWS`
+
+`export AWS_SSH_USERNAME=votreUsernameSSH`
+
+
+### Faire un echo de vos variables d'environnement afin de vérifier que tout est en règle :
+
+`echo $AWS_ACCESS_KEY`
+
+En retour vous devriez recevoir la valeur définie auparavant, à savoir votreCleDaccesAWS. Répetez le processus pour les deux autres variables d'environnement.
 
 ### Modifiez le fichier <a href="vars.json" target="_blank">vars.json</a> avec vos informations d'identification AWS :
 
