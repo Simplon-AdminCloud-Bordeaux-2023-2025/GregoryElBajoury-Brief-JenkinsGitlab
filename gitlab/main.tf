@@ -100,7 +100,7 @@ resource "aws_instance" "gitlab_instance" {
 
   # user_data = <<-EOF
   #             #!/bin/bash
-  #             echo "This is the end, beautifull friend the end."
+  #             echo "Je s'appelle GrOoT"
   #             EOF
 
   tags = {
