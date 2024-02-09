@@ -1,4 +1,4 @@
-# GregoryElBajoury-Deploiement-de-VM-Automatise
+# GregoryElBajoury-Deploiement de VM Automatisé
 ## Le contenu sera push sur la branche `dev`
 
 ## **Contexte du projet**
